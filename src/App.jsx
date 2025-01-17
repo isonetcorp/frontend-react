@@ -16,9 +16,9 @@ const PRODUCTS= [
 function App() {
   return (
     <>
-       {/*<Navigator />*/}
-       {/* <Router />*/}
-        <FilterableProductTable products={PRODUCTS} />
+      <Navigator />
+      <Router />
+         {/*<FilterableProductTable products={PRODUCTS} />*/}
     </>
   )
 }
