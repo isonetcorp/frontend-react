@@ -18,7 +18,7 @@ function App() {
     <>
       <Navigator />
       <Router />
-         {/*<FilterableProductTable products={PRODUCTS} />*/}
+      <FilterableProductTable products={PRODUCTS} />
     </>
   )
 }
