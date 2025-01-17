@@ -1,5 +1,8 @@
 import { motion } from "motion/react"
+import { useState } from "react";
 import useForm from "../Hooks/userForm.jsx";
+import ModalInfo from "../Modals/ModalInfo.jsx";
+
 
 // eslint-disable-next-line react/prop-types
 const FormWithMotionAndHook = ({titleForm}) => {
@@ -7,10 +10,19 @@ const FormWithMotionAndHook = ({titleForm}) => {
         username: '',
         email: ''
     });
+
+    const [showModal, setShowModal]= useState(false);
+
     const handleSubmit = (e) => {
         e.preventDefault();
+        setShowModal(true); // open modal after submit
         console.log('datos del formulario', formData);
     };
+
+    const onCloseModalInfo = () => {
+      setShowModal(false); // close
+    };
+
 
     return (
         <motion.div
@@ -19,6 +31,12 @@ const FormWithMotionAndHook = ({titleForm}) => {
             exit={{opacity: 0}}
             transition={{duration: 0.5}}
         >
+            <ModalInfo 
+                visible={showModal}
+                message='Formulario enviado con exito'
+                onClose={onCloseModalInfo}
+            />
+
             <form onSubmit={handleSubmit}>
                 <motion.div
                     initial={{x: -100}}
