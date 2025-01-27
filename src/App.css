@@ -91,9 +91,21 @@
   z-index: 1000;
 }
 
-notification-success {
-  background-color: #efd6bd;
-  color: #cc8259;
+.notification-success {
+  background-color: #78e08e;
+  color: #070707;
+  padding: 2rem;
+  border: 1px solid #cc8259;
+  border-radius: 0.5rem;
+  max-width: 500px;
+  width: 90%;
+  text-align: center;
+  position: relative;
+}
+
+.notification-error {
+  background-color: #f16666;
+  color: #070707;
   padding: 2rem;
   border: 1px solid #cc8259;
   border-radius: 0.5rem;
@@ -112,4 +124,84 @@ notification-success {
   color: #7e4f1a;
   font-size: 1.5rem;
   cursor: pointer;
+}
+
+.show-password-btn {
+  background-color: blue;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  padding: 5px 10px;
+  margin-left: 10px;
+  cursor: pointer;
+  font-size: 12px; /* Para hacer el botón pequeño */
+}
+
+.show-password-btn:focus {
+  outline: none;
+}
+
+.landing-page {
+  font-family: Arial, sans-serif;
+  color: #333;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  background-color: #4caf50;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.body {
+  padding: 20px;
+}
+
+.welcome h2,
+.topics h2,
+.resources h2 {
+  color: #070707;
+  border-bottom: 2px solid #4caf50;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.welcome p {
+  margin-top: 10px;
+  text-align: left;
+}
+
+.topics ul {
+  list-style: none;
+  padding: 0;
+  margin: 15x 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+  gap: 15px;
+}
+
+.topics ul li {
+ 
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.resources p {
+  margin-top: 10px;
+  text-align: left;
+}
+
+.footer {
+  text-align: center;
+  margin-top: 20px;
+  padding: 10px;
+  border-top: 1px solid #ddd;
 }

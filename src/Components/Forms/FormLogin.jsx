@@ -1,8 +1,7 @@
 import { useState } from 'react';
 
-const FormLogin = ({titleForm}) => {
-
-    const [formData, setFormData]= useState({
+const FormLogin = ({ titleForm }) => {
+    const [formData, setFormData] = useState({
         username: '',
         email: ''
     });
@@ -12,8 +11,8 @@ const FormLogin = ({titleForm}) => {
         console.log('datos del formulario', formData);
     };
 
-    const handleChange = (e) => {
-        const { name, value } = e.target;
+    const handleChange = (event) => {
+        const { name, value } = event.target;
         setFormData({
             ...formData,
             [name]: value,
@@ -51,7 +50,7 @@ const FormLogin = ({titleForm}) => {
         </form>
     </>
     
-    )
+    );
 };
 
 export default FormLogin;
